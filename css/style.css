@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html,
+section {
+    background-color: #ddd9da;
+}
+
+div.todo-page {
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px 5px #a6a7ac;
+}
+
+
+/* web nav */
+
+div.side-bar {
+    padding-top: 30px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95vh;
+}
+
+div.side-bar a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-position: center;
+    transition: 1s;
+}
+
+div.side-bar a img {
+    height: auto;
+    background-position: center;
+    max-width: 100%;
+}
+
+div.side-bar a:hover {
+    width: 120%;
+    background-position: center;
+}
+
+div.side-bar .nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.side-bar .nav ul {
+    list-style: none;
+}
+
+div.side-bar .nav ul li a {
+    text-decoration: none;
+    color: #a09b9b;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all 0.25s ease;
+    font-size: 30px;
+    margin: 30px 0px;
+    padding: 10px;
+}
+
+div.side-bar .nav ul li a:hover {
+    color: #fff;
+    background-color: #6540de;
+    border-radius: 20px;
+}
+
+
+/* mobile nav */
+
+div.mside-bar {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.mside-bar a {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    background-position: center;
+    transition: 1s;
+}
+
+div.mside-bar a img {
+    height: auto;
+    background-position: center;
+    max-width: 100%;
+}
+
+div.mside-bar a:hover {
+    width: 25%;
+    background-position: center;
+}
+
+div.mside-bar {
+    padding-top: 10px;
+    background-color: #fff;
+}
+
+div.mside-bar a {
+    display: flex;
+    width: 20%;
+}
+
+div.mside-bar a {
+    height: auto;
+    max-width: 100%;
+}
+
+div.mside-bar .mnav ul {
+    list-style: none;
+}
+
+div.mside-bar .mnav ul li a {
+    text-decoration: none;
+    color: #a09b9b;
+    display: flex;
+    justify-content: center;
+    transition: all 0.25s ease;
+    font-size: 30px;
+    padding: 10px;
+}
+
+div.mside-bar .mnav ul li a:hover {
+    color: #fff;
+    background-color: #6540de;
+    border-radius: 20px;
+}
+
+
+/* web background */
+
+div.main-page {
+    padding-top: 30px;
+    background-color: rgba(211, 211, 211, 0.6);
+    background-image: url("/assets/background.jpg");
+    background-size: cover;
+    background-blend-mode: hue;
+    background-attachment: fixed;
+}
+
+
+/* mobile background */
+
+div.mmain-page {
+    background-color: rgba(211, 211, 211, 0.6);
+    background-image: url("/assets/background.jpg");
+    background-size: cover;
+    background-blend-mode: hue;
+    background-attachment: fixed;
+}
+
+header h1 {
+    font-size: 30px;
+    color: #10032f;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 span {
+    text-transform: capitalize;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form .todo-item-input {
+    width: 300px;
+    height: 50px;
+    border: none;
+    padding: 0px 10px;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+    box-shadow: 0px 0px 10px 5px #a09b9b;
+}
+
+form .todo-item-input::placeholder {
+    color: #f00851;
+}
+
+form button {
+    height: 50px;
+    width: 10%;
+    border: none;
+    padding: 0px 10px;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 3px -1px 7px 4px #a09b9b;
+    outline: none;
+    font-size: 20px;
+    background-color: #f00851;
+    color: #7366ff;
+}
+
+form button:hover {
+    color: #f00851;
+    background-color: #7366ff;
+}
+
+.main-page ul {
+    list-style: none;
+    margin-top: 20px;
+    width: 70%;
+    transition: all 1s ease;
+    color: #5958e5;
+}
+
+.main-page ul div {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+    transition: all 0.5s ease;
+    height: 50px;
+    background-color: #f0f0ff;
+    border-left: 5px solid #5958e5;
+    border-radius: 10px;
+}
+
+.main-page ul div li {
+    flex: 1;
+    padding: 10px 5px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.main-page ul div button {
+    padding: 2px 5px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+.main-page ul div .completedBtn {
+    background-color: #0cb466;
+    color: #fff;
+    width: 40px;
+}
+
+.main-page ul div .completedBtn:hover {
+    background-color: #077e46;
+    color: rgb(195, 194, 194);
+}
+
+.main-page ul div .deletedBtn {
+    background-color: #f00851;
+    color: #fff;
+    width: 40px;
+}
+
+.main-page ul div .deletedBtn:hover {
+    background-color: #a00435;
+    color: rgb(195, 194, 194);
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.taskComplete {
+    background-color: #e3faf5;
+    opacity: 0.5;
+    color: #16b696;
+    border-left: 5px solid #16b696 !important;
+    border-radius: 10px;
+}
+
+.taskDelete {
+    transform: rotateX(90deg);
+    background-color: #fcedf4 !important;
+    opacity: 0.5;
+    color: #f03b95 !important;
+    border-left: 5px solid #f03b95 !important;
+}
+
+
+/* mobile app styling */
+
+form .mtodo-item-input {
+    width: 80%;
+    height: 50px;
+    border: none;
+    padding: 0px 10px;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+    box-shadow: 0px 0px 10px 5px #a09b9b;
+}
+
+form .mtodo-item-input::placeholder {
+    color: #f00851;
+}
+
+form button {
+    height: 50px;
+    width: 50px;
+    border: none;
+    padding: 0px 10px;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 3px -1px 7px 4px #a09b9b;
+    outline: none;
+    font-size: 20px;
+    background-color: #f00851;
+    color: #7366ff;
+}
+
+form button:hover {
+    color: #f00851;
+    background-color: #7366ff;
+}
+
+.mmain-page ul {
+    list-style: none;
+    margin-top: 20px;
+    transition: all 1s ease;
+    color: #5958e5;
+    width: 100%;
+}
+
+.mmain-page ul div {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+    transition: all 0.5s ease;
+    height: 50px;
+    background-color: #f0f0ff;
+    border-left: 5px solid #5958e5;
+    border-radius: 10px;
+}
+
+.mmain-page ul div li {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+    overflow-x: scroll;
+}
+
+.mmain-page ul div button {
+    padding: 2px 5px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+.mmain-page ul div .mcompletedBtn {
+    background-color: #0cb466;
+    color: #fff;
+    width: 40px;
+}
+
+.mmain-page ul div .mcompletedBtn:hover {
+    background-color: #077e46;
+    color: rgb(195, 194, 194);
+}
+
+.mmain-page ul div .mdeletedBtn {
+    background-color: #f00851;
+    color: #fff;
+    width: 40px;
+}
+
+.mmain-page ul div .mdeletedBtn:hover {
+    background-color: #a00435;
+    color: rgb(195, 194, 194);
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.mtaskcomplete {
+    background-color: #e3faf5;
+    opacity: 0.5;
+    color: #16b696;
+    border-left: 5px solid #16b696 !important;
+    border-radius: 10px;
+}
+
+.mtaskdelete {
+    transform: rotateX(90deg);
+    background-color: #fcedf4 !important;
+    opacity: 0.5;
+    color: #f03b95 !important;
+    border-left: 5px solid #f03b95 !important;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    background-image: none;
+}
+
+
+/* Custom Select */
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    box-shadow: 0px 0px 10px 5px #a09b9b;
+}
+
+
+/* Arrow */
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 1px;
+    right: 0;
+    padding: 8% 1rem;
+    background: #f00851;
+    cursor: pointer;
+    pointer-events: none;
+    height: 50px;
+    color: #fff;
+}
+
+
+/* mobile select */
+
+select {
+    margin-top: 20px;
+    color: #f00851;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    padding: 1px 5px;
+    height: 50px;
+    width: 100%;
+}
+
+
+/* Arrow */
+
+.mselect {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    box-shadow: 0px 0px 10px 5px #a09b9b;
+}
+
+
+/* Arrow */
+
+.mselect::after {
+    content: "\25BC";
+    position: absolute;
+    top: 1px;
+    right: 0;
+    padding: 1rem;
+    background: #f00851;
+    cursor: pointer;
+    pointer-events: none;
+    height: 50px;
+    color: #fff;
+}

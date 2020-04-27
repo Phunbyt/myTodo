@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <title>Phunbyt's Todo-List</title>
+
+</head>
+
+<body>
+    <section class="d-none d-sm-block">
+        <div class="container todo-page">
+            <div class="row">
+                <div class="col-md-1 side-bar">
+                    <div class="icon">
+                        <a href="#">
+                            <img src="assets/letter-p-logo-power_42564-11.jpg">
+                        </a>
+                    </div>
+                    <div class="nav">
+                        <ul>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-check"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-address-book"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-joget"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-question-circle"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-spinner"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-11 main-page">
+                    <header>
+                        <h1><span class="name"></span>Todo List</h1>
+                    </header>
+                    <form>
+                        <input type="text" class="todo-item-input" placeholder="enter new item here">
+                        <button class="addBtn"><i class="fas fa-plus"></i></button>
+                        <div class="select">
+                            <select name="todos" class="filter-todos">
+                            <option value="all">All</option>
+                            <option value="completed">Completed</option>
+                            <option value="uncompleted">Uncompleted</option>
+                            </select>
+                        </div>
+                    </form>
+
+                    <center>
+                        <ul class="todoList"></ul>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- mobile app -->
+
+    <section class="d-block d-sm-none">
+        <div class="container mmain-page">
+            <div class="row">
+                <div class="col-md-1 mside-bar">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a href="#" class="navbar-brand">
+                            <img src="assets/letter-p-logo-power_42564-11.jpg">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse mnav" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li>
+                                    <a href="#"> <i class="fas fa-check"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fas fa-address-book"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fab fa-joget"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fas fa-question-circle"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fas fa-spinner"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-11 main-page">
+                    <header>
+                        <h1><span class="name"></span>Todo List</h1>
+                    </header>
+                    <form>
+                        <input type="text" class="mtodo-item-input" placeholder="enter new item here">
+                        <button class="maddBtn"><i class="fas fa-plus"></i></button>
+
+                    </form>
+
+                    <center>
+                        <div class="mselect">
+                            <select name="todos" class="filter-mtodos">
+                            <option value="mall">All</option>
+                            <option value="mcompleted">Completed</option>
+                            <option value="muncompleted">Uncompleted</option>
+                            </select>
+                        </div>
+                        <ul class="mtodoList"></ul>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
